@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED3BF244B16BF627F1B6D90 /* Pods_Keep_it_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */; };
 		ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC861E58B971006E54AF /* AppDelegate.swift */; };
 		ECA4AC891E58B971006E54AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC881E58B971006E54AF /* ViewController.swift */; };
-		ECA4AC8C1E58B971006E54AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC8A1E58B971006E54AF /* Main.storyboard */; };
 		ECA4AC8E1E58B971006E54AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC8D1E58B971006E54AF /* Assets.xcassets */; };
-		ECA4AC911E58B971006E54AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC8F1E58B971006E54AF /* LaunchScreen.storyboard */; };
+		ECA4AC991E58B9D1006E54AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */; };
+		ECDF75941E58D9AE003315A9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75931E58D9AE003315A9 /* Post.swift */; };
+		ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7254463E15841E8D03877FC7 /* Pods-Keep-it-Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.release.xcconfig"; sourceTree = "<group>"; };
+		7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keep_it_Simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.debug.xcconfig"; sourceTree = "<group>"; };
 		ECA4AC831E58B971006E54AF /* Keep-it-Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep-it-Simple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4AC861E58B971006E54AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA4AC881E58B971006E54AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECA4AC8B1E58B971006E54AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECA4AC8D1E58B971006E54AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ECA4AC901E58B971006E54AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA4AC921E58B971006E54AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECDF75931E58D9AE003315A9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED3BF244B16BF627F1B6D90 /* Pods_Keep_it_Simple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E1F2BA8CCF98FB32F546E12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */,
+				7254463E15841E8D03877FC7 /* Pods-Keep-it-Simple.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6D171E76C3D320763D5BC16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ECA4AC7A1E58B971006E54AF = {
 			isa = PBXGroup;
 			children = (
 				ECA4AC851E58B971006E54AF /* Keep-it-Simple */,
 				ECA4AC841E58B971006E54AF /* Products */,
+				7E1F2BA8CCF98FB32F546E12 /* Pods */,
+				D6D171E76C3D320763D5BC16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +82,11 @@
 			children = (
 				ECA4AC861E58B971006E54AF /* AppDelegate.swift */,
 				ECA4AC881E58B971006E54AF /* ViewController.swift */,
-				ECA4AC8A1E58B971006E54AF /* Main.storyboard */,
 				ECA4AC8D1E58B971006E54AF /* Assets.xcassets */,
-				ECA4AC8F1E58B971006E54AF /* LaunchScreen.storyboard */,
 				ECA4AC921E58B971006E54AF /* Info.plist */,
+				ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */,
+				ECDF75931E58D9AE003315A9 /* Post.swift */,
+				ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */,
 			);
 			path = "Keep-it-Simple";
 			sourceTree = "<group>";
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4AC951E58B971006E54AF /* Build configuration list for PBXNativeTarget "Keep-it-Simple" */;
 			buildPhases = (
+				175A9B169B79F97EB8A3BCBB /* [CP] Check Pods Manifest.lock */,
 				ECA4AC7F1E58B971006E54AF /* Sources */,
 				ECA4AC801E58B971006E54AF /* Frameworks */,
 				ECA4AC811E58B971006E54AF /* Resources */,
+				BA57DBF86C65FC5B10A0B495 /* [CP] Embed Pods Frameworks */,
+				6EAEF8F7FEAD8C88BA95AF89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,44 +154,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA4AC911E58B971006E54AF /* LaunchScreen.storyboard in Resources */,
+				ECA4AC991E58B9D1006E54AF /* GoogleService-Info.plist in Resources */,
 				ECA4AC8E1E58B971006E54AF /* Assets.xcassets in Resources */,
-				ECA4AC8C1E58B971006E54AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		175A9B169B79F97EB8A3BCBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EAEF8F7FEAD8C88BA95AF89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA57DBF86C65FC5B10A0B495 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECA4AC7F1E58B971006E54AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */,
+				ECDF75941E58D9AE003315A9 /* Post.swift in Sources */,
 				ECA4AC891E58B971006E54AF /* ViewController.swift in Sources */,
 				ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		ECA4AC8A1E58B971006E54AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECA4AC8B1E58B971006E54AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ECA4AC8F1E58B971006E54AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECA4AC901E58B971006E54AF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ECA4AC931E58B971006E54AF /* Debug */ = {
@@ -257,6 +317,7 @@
 		};
 		ECA4AC961E58B971006E54AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZXBK6BD56X;
@@ -270,6 +331,7 @@
 		};
 		ECA4AC971E58B971006E54AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7254463E15841E8D03877FC7 /* Pods-Keep-it-Simple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZXBK6BD56X;
@@ -300,6 +362,7 @@
 				ECA4AC971E58B971006E54AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
