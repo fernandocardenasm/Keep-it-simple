@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		1ED3BF244B16BF627F1B6D90 /* Pods_Keep_it_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */; };
 		ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC861E58B971006E54AF /* AppDelegate.swift */; };
-		ECA4AC891E58B971006E54AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC881E58B971006E54AF /* ViewController.swift */; };
+		ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC881E58B971006E54AF /* PostsController.swift */; };
 		ECA4AC8E1E58B971006E54AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC8D1E58B971006E54AF /* Assets.xcassets */; };
 		ECA4AC991E58B9D1006E54AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */; };
 		ECDF75941E58D9AE003315A9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75931E58D9AE003315A9 /* Post.swift */; };
 		ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */; };
+		ECDF759A1E5A060D003315A9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75991E5A060D003315A9 /* PostCell.swift */; };
+		ECDF759C1E5A06AA003315A9 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF759B1E5A06AA003315A9 /* BaseCell.swift */; };
+		ECDF759E1E5A094A003315A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF759D1E5A094A003315A9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +25,15 @@
 		EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.debug.xcconfig"; sourceTree = "<group>"; };
 		ECA4AC831E58B971006E54AF /* Keep-it-Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep-it-Simple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4AC861E58B971006E54AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECA4AC881E58B971006E54AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECA4AC881E58B971006E54AF /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 		ECA4AC8D1E58B971006E54AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA4AC921E58B971006E54AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECDF75931E58D9AE003315A9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceDataSource.swift; sourceTree = "<group>"; };
+		ECDF75991E5A060D003315A9 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		ECDF759B1E5A06AA003315A9 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		ECDF759D1E5A094A003315A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				ECA4AC861E58B971006E54AF /* AppDelegate.swift */,
-				ECA4AC881E58B971006E54AF /* ViewController.swift */,
+				ECA4AC881E58B971006E54AF /* PostsController.swift */,
 				ECA4AC8D1E58B971006E54AF /* Assets.xcassets */,
 				ECA4AC921E58B971006E54AF /* Info.plist */,
 				ECA4AC981E58B9D1006E54AF /* GoogleService-Info.plist */,
 				ECDF75931E58D9AE003315A9 /* Post.swift */,
 				ECDF75971E58DBEC003315A9 /* ApiServiceDataSource.swift */,
+				ECDF75991E5A060D003315A9 /* PostCell.swift */,
+				ECDF759B1E5A06AA003315A9 /* BaseCell.swift */,
+				ECDF759D1E5A094A003315A9 /* Extensions.swift */,
 			);
 			path = "Keep-it-Simple";
 			sourceTree = "<group>";
@@ -216,8 +225,11 @@
 			files = (
 				ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */,
 				ECDF75941E58D9AE003315A9 /* Post.swift in Sources */,
-				ECA4AC891E58B971006E54AF /* ViewController.swift in Sources */,
+				ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */,
 				ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */,
+				ECDF759C1E5A06AA003315A9 /* BaseCell.swift in Sources */,
+				ECDF759A1E5A060D003315A9 /* PostCell.swift in Sources */,
+				ECDF759E1E5A094A003315A9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
