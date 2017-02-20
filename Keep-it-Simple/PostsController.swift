@@ -24,8 +24,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         
         apiService = ApiServiceDataSource()
         
-        //ApiServiceDataSource.sharedInstance.sampleSetPostFirebase()
-        
+//        apiService?.sampleSetPostFirebase()
         fetchPosts()
         
         collectionView?.register(PostCell.self, forCellWithReuseIdentifier: postCellId)
@@ -36,15 +35,23 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     func fetchPosts() {
         apiService?.fetchPosts { (posts) in
             self.posts = posts
+            //print(posts)
+            self.collectionView?.reloadData()
         }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+        if let count = posts?.count {
+            return count
+        }
+        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: postCellId, for: indexPath) as! PostCell
+        
+        cell.post = posts?[indexPath.item]
         
         return cell
     }
@@ -54,7 +61,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        return UIEdgeInsets(top: 4, left: 14, bottom: 0, right: 14)
     }
 
     override func didReceiveMemoryWarning() {

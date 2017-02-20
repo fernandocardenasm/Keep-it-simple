@@ -10,16 +10,29 @@ import UIKit
 
 class PostCell: BaseCell {
     
+    var post: Post? {
+        didSet{
+            titleLabel.text = post?.title as String?
+            descriptionLabel.text = post?.description as String?
+            upVotesLabel.text = post?.upVotes.stringValue
+            downVotesLabel.text = post?.downVotes.stringValue
+        }
+    }
+    
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .yellow
         return label
     }()
     
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .green
-        return label
+    let descriptionLabel: UITextView  = {
+        let tv = UITextView()
+        tv.isEditable = false
+        tv.isScrollEnabled = false
+        tv.textAlignment = .justified
+        tv.backgroundColor = .green
+        return tv
     }()
     
     let upVotesLabel: UILabel = {
@@ -41,6 +54,23 @@ class PostCell: BaseCell {
         addSubview(descriptionLabel)
         addSubview(upVotesLabel)
         addSubview(downVotesLabel)
+        
+        addConstrainstWithFormat("H:|[v0]|", views: titleLabel)
+        addConstrainstWithFormat("H:|[v0]|", views: descriptionLabel)
+        addConstrainstWithFormat("H:[v0(\(frame.width * 0.5))]-2-[v1(\(frame.width * 0.5))]", views: upVotesLabel, downVotesLabel)
+        
+        
+        addConstrainstWithFormat("V:[v0(50)]-2-[v1(100)]-2-[v2(40)]", views: titleLabel, descriptionLabel, upVotesLabel)
+        
+        //Constraint for DownVotes
+        //Top
+        addConstraint(NSLayoutConstraint(item: downVotesLabel, attribute: .top, relatedBy: .equal, toItem: descriptionLabel, attribute: .bottom, multiplier: 1, constant: 2))
+        
+        //Height
+        let downVotesHeightConstraint = NSLayoutConstraint(item: downVotesLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 40)
+        addConstraint(downVotesHeightConstraint)
+        
+        //addConstrainstWithFormat("V:|-154-[v0(30)]", views: downVotesLabel)
         
 //        addConstrainstWithFormat("H:|[v0][v1][v2][v3]|", views: titleLabel, descriptionLabel, upVotesLabel, downVotesLabel)
 //        addConstrainstWithFormat("V:|[v0][v1][v2][v3]|", views: titleLabel, descriptionLabel, upVotesLabel, downVotesLabel)

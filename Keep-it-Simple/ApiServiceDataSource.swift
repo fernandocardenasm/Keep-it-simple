@@ -24,10 +24,13 @@ struct ApiServiceDataSource {
                 
                 var postArray = [Post]()
                 
+                print(posts.count)
+                
                 for post in posts {
                     
                     if let postDetail = post.value as? [String: Any] {
                         do{
+                            
                             try postArray.append(Post(json: postDetail))
                         }
                         catch let error as NSError {
@@ -36,6 +39,7 @@ struct ApiServiceDataSource {
                         
                     }
                 }
+                
                 
                 completion(postArray)
                 
@@ -69,7 +73,8 @@ struct ApiServiceDataSource {
         let post2 = ref.child("posts").childByAutoId()
         
         let postData2 =
-            ["title":"Further observational improvements led to the realization that our Solar System is located in the Milky Way galaxy, which is one of many galaxies in the Universe. It is assumed that galaxies are distributed uniformly and the same in all directions, meaning that the Universe has neither an edge nor a center. Discoveries in the early 20th century have suggested that the Universe had a beginning and that it is expanding[15] at an increasing rate.[16] The majority of mass in the Universe appears to exist in an unknown form called dark matter.",
+            ["title": "What is the structure of the Universe?",
+            "description":"Further observational improvements led to the realization that our Solar System is located in the Milky Way galaxy, which is one of many galaxies in the Universe. It is assumed that galaxies are distributed uniformly and the same in all directions, meaning that the Universe has neither an edge nor a center. Discoveries in the early 20th century have suggested that the Universe had a beginning and that it is expanding[15] at an increasing rate.[16] The majority of mass in the Universe appears to exist in an unknown form called dark matter.",
              "tags":["universe", "galaxies"],
              "userId": "2",
              "upVotes": 0,
