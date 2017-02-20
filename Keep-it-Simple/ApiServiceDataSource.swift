@@ -23,9 +23,7 @@ struct ApiServiceDataSource {
             if let posts = snapshot.value as? NSDictionary {
                 
                 var postArray = [Post]()
-                
-                print(posts.count)
-                
+                                
                 for post in posts {
                     
                     if let postDetail = post.value as? [String: Any] {

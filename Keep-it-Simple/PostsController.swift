@@ -40,6 +40,12 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         }
     }
     
+    func showAppDetailForPost(post: Post){
+        let detailPostViewController = DetailPostViewController()
+        detailPostViewController.post = post
+        navigationController?.pushViewController(detailPostViewController, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if let count = posts?.count {
@@ -54,6 +60,12 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         cell.post = posts?[indexPath.item]
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let post = posts?[indexPath.item] {
+            showAppDetailForPost(post: post)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

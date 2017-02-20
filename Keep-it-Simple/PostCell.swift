@@ -26,13 +26,12 @@ class PostCell: BaseCell {
         return label
     }()
     
-    let descriptionLabel: UITextView  = {
-        let tv = UITextView()
-        tv.isEditable = false
-        tv.isScrollEnabled = false
-        tv.textAlignment = .justified
-        tv.backgroundColor = .green
-        return tv
+    let descriptionLabel: UILabel  = {
+        let label = UILabel()
+        label.numberOfLines = 6
+        label.textAlignment = .justified
+        label.backgroundColor = .green
+        return label
     }()
     
     let upVotesLabel: UILabel = {

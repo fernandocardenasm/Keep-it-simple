@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1ED3BF244B16BF627F1B6D90 /* Pods_Keep_it_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */; };
+		EC236D481E5AF1CD008A6E3B /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */; };
 		ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC861E58B971006E54AF /* AppDelegate.swift */; };
 		ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC881E58B971006E54AF /* PostsController.swift */; };
 		ECA4AC8E1E58B971006E54AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4AC8D1E58B971006E54AF /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		7254463E15841E8D03877FC7 /* Pods-Keep-it-Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.release.xcconfig"; sourceTree = "<group>"; };
 		7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keep_it_Simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.debug.xcconfig"; sourceTree = "<group>"; };
+		EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		ECA4AC831E58B971006E54AF /* Keep-it-Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep-it-Simple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4AC861E58B971006E54AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA4AC881E58B971006E54AF /* PostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				ECDF75991E5A060D003315A9 /* PostCell.swift */,
 				ECDF759B1E5A06AA003315A9 /* BaseCell.swift */,
 				ECDF759D1E5A094A003315A9 /* Extensions.swift */,
+				EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */,
 			);
 			path = "Keep-it-Simple";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */,
+				EC236D481E5AF1CD008A6E3B /* DetailPostViewController.swift in Sources */,
 				ECDF75941E58D9AE003315A9 /* Post.swift in Sources */,
 				ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */,
 				ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */,
