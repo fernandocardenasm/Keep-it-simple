@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class PostsController: UICollectionViewController, UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
     
@@ -45,11 +46,17 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     //Detail Post
     
     func fetchPosts(question: String) {
+        
+        
+        SwiftSpinner.show("You look great today!")
+        
         apiService?.fetchPosts(question: question, completion: { (posts) in
             
             if posts.count == 0 {
                 print("0 elements")
             }
+            
+            SwiftSpinner.hide()
             
             self.posts = posts
             self.collectionView?.reloadData()
