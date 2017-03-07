@@ -12,7 +12,7 @@ struct Post {
     
     var title: NSString
     var description: NSString
-    var tags: [NSString]
+    var views: NSNumber
     var userId: NSString
     var upVotes: NSNumber
     var downVotes: NSNumber
@@ -32,8 +32,8 @@ extension Post {
             
         }
         
-        guard let tags = json["tags"] as? [NSString] else {
-            throw SerializationError.missing("Tags")
+        guard let views = json["views"] as? NSNumber else {
+            throw SerializationError.missing("Views")
             
         }
         
@@ -53,7 +53,7 @@ extension Post {
         }
         self.title = title
         self.description = description
-        self.tags = tags
+        self.views = views
         self.userId = userId
         self.upVotes = upVotes
         self.downVotes = downVotes

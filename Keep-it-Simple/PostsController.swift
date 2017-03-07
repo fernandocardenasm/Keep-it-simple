@@ -8,13 +8,22 @@
 
 import UIKit
 
-class PostsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class PostsController: UICollectionViewController, UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
     
     let postCellId = "postCellId"
     
     var apiService: ApiServiceDataSource?
     
     var posts: [Post]?
+    
+    let searchBar: UISearchBar = {
+        let search = UISearchBar()
+        search.searchBarStyle = UISearchBarStyle.default
+        search.placeholder = " Search..."
+        search.sizeToFit()
+        search.isTranslucent = false
+        return search
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +34,54 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         apiService = ApiServiceDataSource()
         
 //        apiService?.sampleSetPostFirebase()
-        fetchPosts()
         
         collectionView?.register(PostCell.self, forCellWithReuseIdentifier: postCellId)
         
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
         
     }
     
-    func fetchPosts() {
-        apiService?.fetchPosts { (posts) in
+    //Detail Post
+    
+    func fetchPosts(question: String) {
+        apiService?.fetchPosts(question: question, completion: { (posts) in
+            
+            if posts.count == 0 {
+                print("0 elements")
+            }
+            
             self.posts = posts
-            //print(posts)
             self.collectionView?.reloadData()
-        }
+            
+        })
     }
     
     func showAppDetailForPost(post: Post){
         let detailPostViewController = DetailPostViewController()
         detailPostViewController.post = post
         navigationController?.pushViewController(detailPostViewController, animated: true)
+    }
+    
+    //For the Search Bar
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("Clicked")
+        
+        fetchPosts(question: searchBar.text!)
+        
+        self.searchBar.setShowsCancelButton(false, animated: true)
+        self.searchBar.endEditing(true)
+
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(false, animated: true)
+        self.searchBar.endEditing(true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,7 +107,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(view.frame.width - 28, 200)
+        return CGSize(view.frame.width - 28, 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

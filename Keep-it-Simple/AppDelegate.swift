@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = UINavigationController(rootViewController: PostsController(collectionViewLayout: layout))
         
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 44, green: 71, blue: 112)
         
         return true
     }

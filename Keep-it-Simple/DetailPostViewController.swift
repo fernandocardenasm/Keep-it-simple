@@ -22,7 +22,7 @@ class DetailPostViewController: UIViewController {
         label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
         label.numberOfLines = 3
-        label.backgroundColor = .red
+        label.backgroundColor = UIColor.rgb(red: 76, green: 103, blue: 140)
         return label
     }()
     
@@ -31,7 +31,7 @@ class DetailPostViewController: UIViewController {
         tv.textAlignment = .justified
         tv.font = .systemFont(ofSize: 18)
         tv.isEditable = false
-        tv.backgroundColor = .yellow
+        tv.backgroundColor = .white
         return tv
     }()
     
@@ -50,7 +50,7 @@ class DetailPostViewController: UIViewController {
         view.addConstrainstWithFormat("H:|-4-[v0]-4-|", views: titleLabel)
         view.addConstrainstWithFormat("H:|-4-[v0]-4-|", views: descriptionTextView)
         
-        view.addConstrainstWithFormat("V:[v0(\(view.frame.height * 0.20))][v1(\(view.frame.height * 0.75))]|", views: titleLabel, descriptionTextView)
+        view.addConstrainstWithFormat("V:[v0(\(view.frame.height * 0.15))][v1(\(view.frame.height * 0.75))]|", views: titleLabel, descriptionTextView)
 
     }
     
