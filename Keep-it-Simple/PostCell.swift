@@ -13,8 +13,6 @@ class PostCell: BaseCell {
     var post: Post? {
         didSet{
             titleLabel.text = post?.title as String?
-            upVotesLabel.text = post?.upVotes.stringValue
-            downVotesLabel.text = post?.downVotes.stringValue
             viewsLabel.text = post?.views.stringValue
         }
     }

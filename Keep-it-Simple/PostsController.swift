@@ -34,7 +34,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         
         apiService = ApiServiceDataSource()
         
-//        apiService?.sampleSetPostFirebase()
+        apiService?.sampleSetPostFirebase()
         
         collectionView?.register(PostCell.self, forCellWithReuseIdentifier: postCellId)
         

@@ -11,12 +11,10 @@ import UIKit
 struct Post {
     
     var title: NSString
-    var description: NSString
     var views: NSNumber
-    var userId: NSString
-    var upVotes: NSNumber
-    var downVotes: NSNumber
+    var answers: [NSString]?
     
+    var userId: NSString
     
 }
 
@@ -27,36 +25,21 @@ extension Post {
             throw SerializationError.missing("Title")
         }
         
-        guard let description = json["description"] as? NSString else {
-            throw SerializationError.missing("Description")
-            
-        }
         
         guard let views = json["views"] as? NSNumber else {
             throw SerializationError.missing("Views")
             
         }
         
+        
         guard let userId = json["userId"] as? NSString else {
             throw SerializationError.missing("User Id")
             
         }
         
-        guard let upVotes = json["upVotes"] as? NSNumber else {
-            throw SerializationError.missing("up votes")
-            
-        }
-        
-        guard let downVotes = json["downVotes"] as? NSNumber else {
-            throw SerializationError.missing("downVotes")
-            
-        }
         self.title = title
-        self.description = description
         self.views = views
         self.userId = userId
-        self.upVotes = upVotes
-        self.downVotes = downVotes
         
     }
     

@@ -13,7 +13,6 @@ class DetailPostViewController: UIViewController {
     var post: Post? {
         didSet {
             titleLabel.text = post?.title as String?
-            descriptionTextView.text = post?.description as String?
         }
     }
     
@@ -26,7 +25,7 @@ class DetailPostViewController: UIViewController {
         return label
     }()
     
-    let descriptionTextView: UITextView = {
+    let answerTextView: UITextView = {
         let tv = UITextView()
         tv.textAlignment = .justified
         tv.font = .systemFont(ofSize: 18)
@@ -45,12 +44,12 @@ class DetailPostViewController: UIViewController {
     
     func setupViews() {
         view.addSubview(titleLabel)
-        view.addSubview(descriptionTextView)
+        view.addSubview(answerTextView)
         
         view.addConstrainstWithFormat("H:|-4-[v0]-4-|", views: titleLabel)
-        view.addConstrainstWithFormat("H:|-4-[v0]-4-|", views: descriptionTextView)
+        view.addConstrainstWithFormat("H:|-4-[v0]-4-|", views: answerTextView)
         
-        view.addConstrainstWithFormat("V:[v0(\(view.frame.height * 0.15))][v1(\(view.frame.height * 0.75))]|", views: titleLabel, descriptionTextView)
+        view.addConstrainstWithFormat("V:[v0(\(view.frame.height * 0.15))][v1(\(view.frame.height * 0.75))]|", views: titleLabel, answerTextView)
 
     }
     
