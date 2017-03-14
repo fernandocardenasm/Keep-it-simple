@@ -66,10 +66,12 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         })
     }
     
-    func showAppDetailForPost(post: Post){
-        let detailPostViewController = DetailPostViewController()
-        detailPostViewController.post = post
-        navigationController?.pushViewController(detailPostViewController, animated: true)
+    func showAnswersForPost(post: Post){
+        let layout = UICollectionViewFlowLayout()
+
+        let detailAnswersController = DisplayAnswersController(collectionViewLayout: layout)
+        detailAnswersController.post = post
+        navigationController?.pushViewController(detailAnswersController, animated: true)
     }
     
     //For the Search Bar
@@ -110,7 +112,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let post = posts?[indexPath.item] {
-            showAppDetailForPost(post: post)
+            showAnswersForPost(post: post)
         }
     }
     

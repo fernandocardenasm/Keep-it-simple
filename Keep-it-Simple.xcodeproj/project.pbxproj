@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1ED3BF244B16BF627F1B6D90 /* Pods_Keep_it_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */; };
-		EC236D481E5AF1CD008A6E3B /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */; };
+		EC236D481E5AF1CD008A6E3B /* DetailAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC236D471E5AF1CD008A6E3B /* DetailAnswerViewController.swift */; };
 		EC5644491E70753E0003D9B3 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5644481E70753E0003D9B3 /* Answer.swift */; };
 		ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC861E58B971006E54AF /* AppDelegate.swift */; };
 		ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4AC881E58B971006E54AF /* PostsController.swift */; };
@@ -19,13 +19,15 @@
 		ECDF759A1E5A060D003315A9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF75991E5A060D003315A9 /* PostCell.swift */; };
 		ECDF759C1E5A06AA003315A9 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF759B1E5A06AA003315A9 /* BaseCell.swift */; };
 		ECDF759E1E5A094A003315A9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF759D1E5A094A003315A9 /* Extensions.swift */; };
+		EDF5B4D11E7863EC002732B4 /* DisplayAnswersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5B4D01E7863EC002732B4 /* DisplayAnswersController.swift */; };
+		EDF5B4D31E78642D002732B4 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5B4D21E78642D002732B4 /* AnswerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7254463E15841E8D03877FC7 /* Pods-Keep-it-Simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.release.xcconfig"; sourceTree = "<group>"; };
 		7637321CFD043FE21390C611 /* Pods_Keep_it_Simple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keep_it_Simple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB263C59E830908991C64F12 /* Pods-Keep-it-Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keep-it-Simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keep-it-Simple/Pods-Keep-it-Simple.debug.xcconfig"; sourceTree = "<group>"; };
-		EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		EC236D471E5AF1CD008A6E3B /* DetailAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAnswerViewController.swift; sourceTree = "<group>"; };
 		EC5644481E70753E0003D9B3 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		ECA4AC831E58B971006E54AF /* Keep-it-Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keep-it-Simple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4AC861E58B971006E54AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		ECDF75991E5A060D003315A9 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		ECDF759B1E5A06AA003315A9 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		ECDF759D1E5A094A003315A9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EDF5B4D01E7863EC002732B4 /* DisplayAnswersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayAnswersController.swift; sourceTree = "<group>"; };
+		EDF5B4D21E78642D002732B4 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 				ECDF75991E5A060D003315A9 /* PostCell.swift */,
 				ECDF759B1E5A06AA003315A9 /* BaseCell.swift */,
 				ECDF759D1E5A094A003315A9 /* Extensions.swift */,
-				EC236D471E5AF1CD008A6E3B /* DetailPostViewController.swift */,
+				EC236D471E5AF1CD008A6E3B /* DetailAnswerViewController.swift */,
+				EDF5B4D01E7863EC002732B4 /* DisplayAnswersController.swift */,
+				EDF5B4D21E78642D002732B4 /* AnswerCell.swift */,
 			);
 			path = "Keep-it-Simple";
 			sourceTree = "<group>";
@@ -230,13 +236,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECDF75981E58DBEC003315A9 /* ApiServiceDataSource.swift in Sources */,
-				EC236D481E5AF1CD008A6E3B /* DetailPostViewController.swift in Sources */,
+				EC236D481E5AF1CD008A6E3B /* DetailAnswerViewController.swift in Sources */,
 				ECDF75941E58D9AE003315A9 /* Post.swift in Sources */,
+				EDF5B4D31E78642D002732B4 /* AnswerCell.swift in Sources */,
 				EC5644491E70753E0003D9B3 /* Answer.swift in Sources */,
 				ECA4AC891E58B971006E54AF /* PostsController.swift in Sources */,
 				ECA4AC871E58B971006E54AF /* AppDelegate.swift in Sources */,
 				ECDF759C1E5A06AA003315A9 /* BaseCell.swift in Sources */,
 				ECDF759A1E5A060D003315A9 /* PostCell.swift in Sources */,
+				EDF5B4D11E7863EC002732B4 /* DisplayAnswersController.swift in Sources */,
 				ECDF759E1E5A094A003315A9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

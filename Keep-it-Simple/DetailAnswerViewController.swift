@@ -8,11 +8,17 @@
 
 import UIKit
 
-class DetailPostViewController: UIViewController {
+class DetailAnswerViewController: UIViewController {
+    
+    var answer: Answer? {
+        didSet {
+            answerTextView.text = answer?.description as? String
+        }
+    }
     
     var post: Post? {
         didSet {
-            titleLabel.text = post?.title as String?
+            titleLabel.text = post?.title as? String
         }
     }
     
@@ -24,6 +30,7 @@ class DetailPostViewController: UIViewController {
         label.backgroundColor = UIColor.rgb(red: 76, green: 103, blue: 140)
         return label
     }()
+    
     
     let answerTextView: UITextView = {
         let tv = UITextView()
@@ -51,6 +58,7 @@ class DetailPostViewController: UIViewController {
         
         view.addConstrainstWithFormat("V:[v0(\(view.frame.height * 0.15))][v1(\(view.frame.height * 0.75))]|", views: titleLabel, answerTextView)
 
+        
     }
     
 }

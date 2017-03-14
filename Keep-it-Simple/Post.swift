@@ -74,6 +74,24 @@ extension Post {
         return scoreArray.max() ?? 0
     }
     
+    func getAnswerWithMaxScore()-> Answer{
+        
+        var max = -10000
+        var auxAnswer: Answer?
+    
+        if let answers = self.answers {
+            for answer in answers {
+                
+                if max < answer.upVotes - answer.downVotes {
+                    max = answer.upVotes - answer.downVotes
+                    auxAnswer = answer
+                }
+            }
+        }
+        
+        return auxAnswer!
+    }
+    
 }
 
 enum SerializationError: Error {

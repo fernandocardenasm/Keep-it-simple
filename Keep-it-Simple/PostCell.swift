@@ -34,6 +34,7 @@ class PostCell: BaseCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 3
+        label.textAlignment = .center
         label.backgroundColor = UIColor.rgb(red: 76, green: 103, blue: 140)
         return label
     }()
