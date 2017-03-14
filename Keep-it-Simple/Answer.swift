@@ -13,13 +13,11 @@ struct Answer {
     
     var description: NSString
     var views: NSNumber
-    var upVotes: NSNumber
-    var downVotes: NSNumber
+    var upVotes: Int
+    var downVotes: Int
     
     var userId: NSString
     
-    var postId: NSString
-
 }
 
 extension Answer {
@@ -37,12 +35,12 @@ extension Answer {
         }
         
         
-        guard let upVotes = json["upVotes"] as? NSNumber else {
+        guard let upVotes = json["upVotes"] as? Int else {
             throw SerializationError.missing("up votes")
             
         }
         
-        guard let downVotes = json["downVotes"] as? NSNumber else {
+        guard let downVotes = json["downVotes"] as? Int else {
             throw SerializationError.missing("downVotes")
             
         }
@@ -52,17 +50,11 @@ extension Answer {
             
         }
         
-        guard let postId = json["postId"] as? NSString else {
-            throw SerializationError.missing("User Id")
-            
-        }
-        
         self.description = description
         self.views = views
         self.upVotes = upVotes
         self.downVotes = downVotes
         self.userId = userId
-        self.postId = postId
         
     }
     

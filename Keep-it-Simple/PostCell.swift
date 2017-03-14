@@ -13,7 +13,20 @@ class PostCell: BaseCell {
     var post: Post? {
         didSet{
             titleLabel.text = post?.title as String?
-            viewsLabel.text = post?.views.stringValue
+            
+            
+            if let numAnswers = post?.answers?.count{
+                numAnswersLabel.text = "Answers: \(numAnswers)"
+                
+                if let maxScore = post?.getMaxScoreForPost() {
+                    maxScoreLabel.text = "Score: \(maxScore)"
+                }
+            }
+            
+            if let numViews = post?.views {
+                viewsLabel.text = "Views: \(numViews)"
+            }
+            
         }
     }
     
@@ -25,24 +38,24 @@ class PostCell: BaseCell {
         return label
     }()
     
-    let upVotesLabel: UILabel = {
+    let numAnswersLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.backgroundColor = .green
+        label.backgroundColor = .white
         return label
     }()
     
-    let downVotesLabel: UILabel = {
+    let maxScoreLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.backgroundColor = .red
+        label.backgroundColor = .white
         return label
     }()
     
     let viewsLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.backgroundColor = .gray
+        label.backgroundColor = .white
         return label
     }()
     
@@ -50,22 +63,22 @@ class PostCell: BaseCell {
         super.setUpViews()
         
         addSubview(titleLabel)
-        addSubview(upVotesLabel)
-        addSubview(downVotesLabel)
+        addSubview(numAnswersLabel)
+        addSubview(maxScoreLabel)
         addSubview(viewsLabel)
         
         addConstrainstWithFormat("H:|[v0]|", views: titleLabel)
-        addConstrainstWithFormat("H:[v0(\(frame.width * 0.33))]-2-[v1(\(frame.width * 0.33))]-2-[v2(\(frame.width * 0.33))]", views: upVotesLabel, downVotesLabel, viewsLabel)
+        addConstrainstWithFormat("H:[v0(\(frame.width * 0.33))]-2-[v1(\(frame.width * 0.33))]-2-[v2(\(frame.width * 0.33))]", views: numAnswersLabel, maxScoreLabel, viewsLabel)
         
         
-        addConstrainstWithFormat("V:[v0(50)]-2-[v1(40)]", views: titleLabel, upVotesLabel)
+        addConstrainstWithFormat("V:[v0(50)]-2-[v1(40)]", views: titleLabel, numAnswersLabel)
         
         //Constraint for DownVotes
         //Top
-        addConstraint(NSLayoutConstraint(item: downVotesLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 2))
+        addConstraint(NSLayoutConstraint(item: maxScoreLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 2))
         
         //Height
-        let downVotesHeightConstraint = NSLayoutConstraint(item: downVotesLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 40)
+        let downVotesHeightConstraint = NSLayoutConstraint(item: maxScoreLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 40)
         addConstraint(downVotesHeightConstraint)
         
         //Constraint for Views

@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 struct Post {
-    
+        
     var title: NSString
-    var views: NSNumber
-    var answers: [NSString]?
+    var views: Int
+    var answers: [Answer]?
     
     var userId: NSString
     
@@ -26,14 +27,31 @@ extension Post {
         }
         
         
-        guard let views = json["views"] as? NSNumber else {
+        guard let views = json["views"] as? Int else {
             throw SerializationError.missing("Views")
             
         }
         
-        
         guard let userId = json["userId"] as? NSString else {
             throw SerializationError.missing("User Id")
+            
+        }
+        
+        
+        if let auxAnswers = json["answers"] as? [[String: Any]]{
+            
+            self.answers = [Answer]()
+            
+            for answer in auxAnswers {
+                
+                do{
+                    try self.answers?.append(Answer(json: answer))
+                }
+                catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+                
+            }
             
         }
         
@@ -41,6 +59,19 @@ extension Post {
         self.views = views
         self.userId = userId
         
+    }
+    
+    func getMaxScoreForPost()-> Int{
+        var scoreArray = [Int]()
+        
+        if let answers = self.answers {
+            for answer in answers {
+                
+                scoreArray.append(answer.upVotes - answer.downVotes)
+            }
+        }
+        
+        return scoreArray.max() ?? 0
     }
     
 }

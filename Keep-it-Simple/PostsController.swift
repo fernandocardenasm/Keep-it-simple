@@ -34,7 +34,9 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         
         apiService = ApiServiceDataSource()
         
-        apiService?.sampleSetPostFirebase()
+//        apiService?.sampleSetPostFirebase()
+        
+        
         
         collectionView?.register(PostCell.self, forCellWithReuseIdentifier: postCellId)
         
@@ -73,7 +75,6 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     //For the Search Bar
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Clicked")
         
         fetchPosts(question: searchBar.text!)
         
