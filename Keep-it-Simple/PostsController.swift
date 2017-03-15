@@ -37,7 +37,6 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
 //        apiService?.sampleSetPostFirebase()
         
         
-        
         collectionView?.register(PostCell.self, forCellWithReuseIdentifier: postCellId)
         
         searchBar.delegate = self
@@ -112,7 +111,17 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let post = posts?[indexPath.item] {
-            showAnswersForPost(post: post)
+            if let count = post.answers?.count, count > 0 {
+                showAnswersForPost(post: post)
+            }
+            else{
+                let alertController = UIAlertController(title: "No answers yet!", message: "You can be the first one, who adds an answer ;)", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler:nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+            }
         }
     }
     

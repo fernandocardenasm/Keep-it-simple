@@ -22,6 +22,9 @@ class PostCell: BaseCell {
                     maxScoreLabel.text = "Score: \(maxScore)"
                 }
             }
+            else {
+                numAnswersLabel.text = "Answers: 0"
+            }
             
             if let numViews = post?.views {
                 viewsLabel.text = "Views: \(numViews)"

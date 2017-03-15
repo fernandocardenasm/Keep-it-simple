@@ -46,6 +46,9 @@ extension Post {
                 
                 do{
                     try self.answers?.append(Answer(json: answer))
+                    
+                    self.answers = self.answers?.sorted {($0.upVotes - $0.downVotes) > ($1.upVotes - $1.downVotes)}
+                    
                 }
                 catch let error as NSError {
                     print(error.localizedDescription)
@@ -91,6 +94,7 @@ extension Post {
         
         return auxAnswer!
     }
+    
     
 }
 

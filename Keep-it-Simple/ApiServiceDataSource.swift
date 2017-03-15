@@ -64,16 +64,24 @@ struct ApiServiceDataSource {
         let answerData =
             ["description":"A sailing yacht is a leisure craft that uses sails as its primary means of propulsion. Sailing yachts are actively used in sport and are a category of classes recognized by the International Sailing Federation. Shown here is the Zapata II, built in 1964, during the 2013 Ahmanson Cup in Newport Beach, California.",
              "views": 20,
-             "userId": "1",
+             "userId": "robert_stein",
              "upVotes": 5,
              "downVotes": 10,
                 ] as [String : Any]
         
+        let answerData2 =
+            ["description":"Sailing has been around for travel and fishing, but it’s only become a sport since the early 17th century. The Dutch are said to be the first nation who raced yachts for fun. They gave a ship to Charles II and the sport quickly became popular in England before being taken up in America.",
+             "views": 100,
+             "userId": "robert_stein",
+             "upVotes": 100,
+             "downVotes": 2,
+             ] as [String : Any]
+        
         let postData =
-            ["title":"A",
+            ["title":"What is sailing?",
              "views": 10,
-             "userId": "1",
-             "answers":[answerData]
+             "userId": "monkey_d_luffy",
+             "answers":[answerData, answerData2]
                 ] as [String : Any]
         
         
@@ -81,22 +89,33 @@ struct ApiServiceDataSource {
         
         let post2 = ref.child("posts").childByAutoId()
         
-        let answerData2 =
+        let answerData3 =
             ["description":"Burned by Harry's hands, which to Quirrell were white-hot and caused severe blistering, and abandonment by Voldemort's soul.",
              "views": 20,
-             "userId": "1",
-             "upVotes": 5,
-             "downVotes": 10,
+             "userId": "john_smith",
+             "upVotes": 8,
+             "downVotes": 4,
                 ] as [String : Any]
         
         let postData2 =
             ["title":"What killed Harry?",
              "views": 20,
-             "userId": "2",
-             "answers":[answerData2]
+             "userId": "jack_sparrow",
+             "answers":[answerData3]
                 ] as [String : Any]
         
         post2.setValue(postData2)
+        
+        let post3 = ref.child("posts").childByAutoId()
+        
+        let postData3 =
+            ["title":"How can I smile more?",
+             "views": 1000,
+             "userId": "jack_sparrow",
+             "answers":[]
+                ] as [String : Any]
+        
+        post3.setValue(postData3)
         
     }
 
