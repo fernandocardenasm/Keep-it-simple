@@ -20,7 +20,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
     let searchBar: UISearchBar = {
         let search = UISearchBar()
         search.searchBarStyle = UISearchBarStyle.default
-        search.placeholder = " Search..."
+        search.placeholder = "What would you like to ask?"
         search.sizeToFit()
         search.isTranslucent = false
         return search
@@ -30,7 +30,7 @@ class PostsController: UICollectionViewController, UICollectionViewDelegateFlowL
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        collectionView?.backgroundColor = .blue
+        collectionView?.backgroundColor = .white
         
         apiService = ApiServiceDataSource()
         

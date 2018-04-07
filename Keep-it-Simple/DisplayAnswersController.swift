@@ -17,7 +17,7 @@ class DisplayAnswersController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = .blue
+        collectionView?.backgroundColor = .white
         
         collectionView?.register(AnswerCell.self, forCellWithReuseIdentifier: answerCellId)
 

@@ -12,13 +12,13 @@ class DetailAnswerViewController: UIViewController {
     
     var answer: Answer? {
         didSet {
-            answerTextView.text = answer?.description as? String
+            answerTextView.text = answer?.description as String?
         }
     }
     
     var post: Post? {
         didSet {
-            titleLabel.text = post?.title as? String
+            titleLabel.text = post?.title as String?
         }
     }
     
@@ -44,7 +44,7 @@ class DetailAnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
         
         setupViews()
     }
